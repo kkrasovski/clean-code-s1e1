@@ -68,7 +68,8 @@ var editTask=function(){
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
   var listItem=this.parentNode;
-  var editInput=listItem.querySelector('input[type=text]');
+  var editInput=listItem.querySelector('.task-input');
+  console.log(editInput)
   var label=listItem.querySelector("label");
   console.log(label)
   var editBtn=listItem.querySelector(".button_edit");
@@ -136,7 +137,7 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
   var checkBox=taskListItem.querySelector("input[type=checkbox]");
-  console.log(checkBox)
+  console.log(taskListItem.querySelector(".done-cheker"))
   var editButton=taskListItem.querySelector(".button_edit");
   var deleteButton=taskListItem.querySelector(".button_delete");
   //Bind editTask to edit button.
