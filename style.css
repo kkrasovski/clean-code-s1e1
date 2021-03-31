@@ -18,9 +18,11 @@ body {
 }
 
 @media (max-width:768px) {
+
 .head {
   text-align: center;
 }
+
 }
 .main-wrapper {
   display: block;
