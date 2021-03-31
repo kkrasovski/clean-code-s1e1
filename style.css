@@ -94,7 +94,7 @@ button {
 .task-input-new {
   width: 318px;
 }
-.button:hover {
+.todo-section__button:hover {
   color: #0fc57c;
 }
 
@@ -115,6 +115,7 @@ li > * {
 .is-done {
   margin: 0 10px;
 }
+
 .task-title {
   padding-left: 10px;
   box-sizing: border-box;
