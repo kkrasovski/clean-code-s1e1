@@ -32,7 +32,7 @@ body {
 .task {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 .task-row-wrapper {
   display: flex;
@@ -120,7 +120,7 @@ li > * {
   width: 226px;
 }
 .task-input {
-  width: 226px
+  width: 226px;
 }
 .delete:hover {
   color: #cf2323;
@@ -141,7 +141,7 @@ li > * {
 
 /* Edit Task */
 .todo-task .task-input {
-  display: none
+  display: none;
 }
 
 .edit-mode .task-input {
