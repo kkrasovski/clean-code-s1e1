@@ -135,7 +135,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
-  var checkBox=taskListItem.querySelector("input[type=checkbox]");
+  var checkBox=taskListItem.querySelector(".done-cheker");
   var editButton=taskListItem.querySelector(".button_edit");
   var deleteButton=taskListItem.querySelector(".button_delete");
   //Bind editTask to edit button.

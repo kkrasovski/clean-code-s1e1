@@ -104,7 +104,8 @@ button {
 .done-cheker {
   margin: 0 10px;
 }
-.one-task, .edit-mode {
+.one-task,
+.edit-mode {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -120,7 +121,7 @@ button {
 }
 /* Completed */
 .completed-task{
-  text-decoration: line-through; color: 888;
+  text-decoration: line-through;
 }
 /* Edit Task */
 .one-task .task-input {
