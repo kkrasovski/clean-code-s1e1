@@ -5,19 +5,19 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css"  media="screen" charset="utf-8">
   </head>
-  <body>
-    <header class="head">
+  <body class="todo-list">
+    <header class="todo-list_head head">
       <img src="./eisenhower-matrix.jpg" class="head__img" alt="Eisenhower matrix">
       <a class="head__more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
-    <main class="main-wrapper">
+    <main class="todo-list__wrap main-wrapper">
       <section class="main-wrapper__section">
         <div id="add-item" class="add-task">
           <h3 class="main-wrapper__title main-wrapper__title_add">Add Item</h3>
           <div class="add-task_wrapper">
             <input 
                 id="new-task" 
-                class="main-wrapper__expander task-input" 
+                class="main-wrapper__expander task-input one-task_input" 
                 type="text">
             <button class="button">Add</button>
           </div>
@@ -29,7 +29,7 @@
           <li class="one-task">
             <input type="checkbox" class="done-cheker">
             <label class="incomplete__title main-wrapper__expander">Pay Bills</label>
-            <input type="text" class="main-wrapper__expander task-input">
+            <input type="text" class="main-wrapper__expander task-input one-task_input">
             <button class="button button_edit">Edit</button>
             <button class="button button_delete"><img src="./remove.svg" class="button__icon" alt=""></button>
           </li>
@@ -39,7 +39,7 @@
             <input 
                 type="text" 
                 value="Go Shopping" 
-                class="incomplete__container task-input main-wrapper__expander">
+                class="main-wrapper__expander task-input one-task_input">
             <button class="button button_edit">Save</button>
             <button class="button button_delete"><img src="./remove.svg" class="button__icon" alt=""></button>
           </li>
