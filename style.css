@@ -10,10 +10,10 @@ body {
   display: block;
   text-align: right;
 }
-.head-img {
+.head__img {
   width: 100%;
 }
-.more {
+.head__more {
   font-family: fantasy, cursive;
 }
 
@@ -34,7 +34,7 @@ body {
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.todo-section__row {
   display: flex;
 }
 ul {
@@ -61,7 +61,7 @@ button {
  color: #3a3a3a;
 }
 /* Heading */
-.section-title {
+.todo-section__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +87,7 @@ button {
 }
 
 /* New Task */
-.add-tittle {
+.todo-section__title_add-tittle {
   display: block;
   margin: 0 0 20px;
 }
