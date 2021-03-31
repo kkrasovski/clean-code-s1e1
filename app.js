@@ -13,7 +13,6 @@ var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
-
 //New task list item
 var createNewTaskElement=function(taskString){
   var listItem=document.createElement("li");
@@ -24,7 +23,6 @@ var createNewTaskElement=function(taskString){
   var label=document.createElement("label");//label
   //input (text)
   var editInput=document.createElement("input");//text
-
   //button.edit
   var editButton=document.createElement("button");//edit button
   editButton.classList = "button";
@@ -52,8 +50,6 @@ var createNewTaskElement=function(taskString){
   listItem.appendChild(deleteButton);
   return listItem;
 }
-
-
 
 var addTask=function(){
   console.log("Add Task...");
@@ -91,7 +87,6 @@ var editTask=function(){
   listItem.classList.toggle("one-task_edit-mode");
 };
 
-
 //Delete task.
 var deleteTask=function(){
   console.log("Delete Task...");
@@ -100,7 +95,6 @@ var deleteTask=function(){
   //Remove the parent list item from the ul.
   ul.removeChild(listItem);
 }
-
 
 //Mark task completed
 var taskCompleted=function(){
@@ -114,7 +108,6 @@ var taskCompleted=function(){
   console.log(label)
 }
 
-
 var taskIncomplete=function(){
   console.log("Incomplete Task...");
   //Mark task as incomplete.
@@ -123,9 +116,10 @@ var taskIncomplete=function(){
   var listItem=this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
+  var label=listItem.querySelector(".completed-task");
+  label.classList.remove("completed-task");
+  label.classList.add("incomplete__title");
 }
-
-
 
 var ajaxRequest=function(){
   console.log("AJAX Request");
@@ -133,12 +127,10 @@ var ajaxRequest=function(){
 
 //The glue to hold it all together.
 
-
 //Set the click handler to the addTask function.
 addButton.onclick=addTask;
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
-
 
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
@@ -146,8 +138,6 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   var checkBox=taskListItem.querySelector("input[type=checkbox]");
   var editButton=taskListItem.querySelector(".button_edit");
   var deleteButton=taskListItem.querySelector(".button_delete");
-console.log(editButton)
-
   //Bind editTask to edit button.
   editButton.onclick=editTask;
   //Bind deleteTask to delete button.
@@ -157,24 +147,18 @@ console.log(editButton)
 }
 
 //cycle over incompleteTaskHolder ul list items
+
 //for each list item
 for (var i=0; i<incompleteTaskHolder.children.length;i++){
-
   //bind events to list items chldren(tasksCompleted)
   bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
-
-
-
 
 //cycle over completedTasksHolder ul list items
 for (var i=0; i<completedTasksHolder.children.length;i++){
   //bind events to list items chldren(tasksIncompleted)
   bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
-
-
-
 
 // Issues with usability don't get seen until they are in front of a human tester.
 
