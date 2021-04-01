@@ -96,6 +96,12 @@ button {
 .button__icon:hover {
   transform: rotateZ(0);
 }
+.button:hover {
+  color: #3a3a3a;
+}
+.button_add:hover {
+  color: #0FC57C;
+}
 .button__icon {
   height: 2em;
   transform: rotateZ(45deg);
@@ -121,7 +127,7 @@ button {
 }
 /* Completed */
 .completed-task{
-  text-decoration: line-through;
+  text-decoration: line-through red;
 }
 /* Edit Task */
 .one-task .task-input {

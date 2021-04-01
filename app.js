@@ -35,6 +35,7 @@ var createNewTaskElement=function(taskString){
   label.className='incomplete__title main-wrapper__expander';
   //Each elements, needs appending
   checkBox.type="checkbox";
+  checkBox.classList.add("done-cheker");
   editInput.type="text";
   editInput.className="main-wrapper__expander task-input";
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
@@ -68,7 +69,8 @@ var editTask=function(){
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
   var listItem=this.parentNode;
-  var editInput=listItem.querySelector('input[type=text]');
+  var editInput=listItem.querySelector('.task-input');
+  console.log(editInput)
   var label=listItem.querySelector("label");
   console.log(label)
   var editBtn=listItem.querySelector(".button_edit");
