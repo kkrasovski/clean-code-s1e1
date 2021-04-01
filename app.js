@@ -35,6 +35,7 @@ var createNewTaskElement=function(taskString){
   label.className='incomplete__title main-wrapper__expander';
   //Each elements, needs appending
   checkBox.type="checkbox";
+  checkBox.classList.add("done-cheker");
   editInput.type="text";
   editInput.className="main-wrapper__expander task-input";
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
@@ -136,8 +137,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
-  var checkBox=taskListItem.querySelector("input[type=checkbox]");
-  console.log(taskListItem.querySelector(".done-cheker"))
+  var checkBox=taskListItem.querySelector(".done-cheker");
   var editButton=taskListItem.querySelector(".button_edit");
   var deleteButton=taskListItem.querySelector(".button_delete");
   //Bind editTask to edit button.
