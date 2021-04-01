@@ -69,7 +69,7 @@ var editTask=function(){
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
   var listItem=this.parentNode;
-  var editInput=listItem.querySelector('.task-input');
+  var editInput=listItem.querySelector(".task-input");
   console.log(editInput)
   var label=listItem.querySelector("label");
   console.log(label)
